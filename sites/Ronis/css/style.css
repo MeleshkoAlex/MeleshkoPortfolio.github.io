@@ -1,0 +1,890 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  font-size: 62.55%; }
+body{
+	font:300 1.6rem/2.4rem 'Yantramanav', sans-serif;
+}
+h2{
+	font:300 3rem/3.8rem 'Nunito', sans-serif;
+}
+h3{
+	font:400 1.6rem/2.4rem 'Yantramanav', sans-serif;
+}
+.align-center{
+	text-align: center !important;
+}
+.header{
+	position: absolute;
+	top:5%;
+	left:5%;
+	z-index: 10;
+}
+.logo{
+	display: block;
+	width: 100px;
+	height: 40px;
+	background: url(../img/design/logot.png) left top/contain no-repeat;
+}
+/***************head-slider******************************
+****************************************************************/
+.head-slider{
+	position: relative;
+	z-index: 2;
+	height: 100vh;
+}
+.wrpa-head{
+	padding: 2.5%;
+	position: relative;
+	z-index: 20;
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+	height: 100vh;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;	
+}
+.head-slider h1{
+	font:300 6rem/7rem 'Nunito', sans-serif;
+	margin:0 0 2rem 0;
+}
+.head-slider p{
+	font:300 2rem/2.7rem 'Yantramanav', sans-serif;
+}
+.slider-text-last{
+	margin: 0 0 6rem 0;
+}
+.head-sing-up-email{
+	color:#000;
+	width: 210px;
+	padding: 1rem 1rem 1rem 2.5rem;
+	border: none;
+	border-radius: 30px 0 0 30px;
+}
+.head-sing-up-submit{
+	font:400 2rem/2rem 'Nunito', sans-serif;
+	border: none;
+	background: #00AD49;
+	padding: .6rem 2rem .6rem 2rem;
+	border-radius: 0 30px 30px 0;
+	margin:0 0 0 -.5rem;
+	color: #fff;
+}
+.head-sing-up{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+/*******************************SLIDER**************/
+.slider{
+	position: absolute !important;
+	width: 100%;
+	z-index:1;
+	height: 100vh;
+}
+.slider div{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+}
+.slider div img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.slick-dots{
+	display: none;
+}
+/***************SECTION-about-plaes******************************
+****************************************************************/
+.about-plaes{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:justify;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+}
+.about-plaes article{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	text-align: center;
+	width: 100%;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.about-plaes article p{
+	text-align: justify;
+}
+.about-plaes article img{
+	width: 100%;
+}
+.about-plae{
+	padding: 2.5rem 2.5%;
+}
+.about-plae h2{
+	margin: 0 0 4.7rem 0;
+}
+.about-plae p {
+	margin: 0 0 3.7rem 0;
+	font:300 1.8rem/2.6rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-about-plaes-2block******************************
+****************************************************************/
+.about-plae-2block{
+	padding: 2.5rem 2.5%;
+}
+.about-plae-2block h2{
+	margin: 0 0 12.5rem 0;
+}
+.edie-age{
+	margin: 0 !important;
+}
+.about-plae-2block-text{
+	margin:0 0 10.8rem 0; 
+}
+/***************SECTION-about-plaes-3block******************************
+****************************************************************/
+.about-plae-3block{
+	padding: 2.5rem 2.5%;
+}
+.about-plae-3block p{
+	margin:0 0 10.8rem 0;
+}
+/***************SECTION-the-range*******************************
+****************************************************************/
+.section-the-range{
+	text-align: center;
+	padding: 10% 2.5%;
+}
+.section-the-range h2{
+	margin: 0 0 2rem 0;
+}
+.text-product{
+	margin: 0 0 10rem 0;
+}
+.wrapper-product{
+	margin:0 0 8rem 0;
+}
+.name-product{
+	font:300 2.4rem/3.8rem 'Nunito', sans-serif;
+	margin: 0 0 2rem 0;
+}
+.number-position{
+	font:300 2.1rem/2.6rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-Product-description*******************************
+************************************************************************/
+.product-description{
+	width: 100%;
+	padding: 8rem 0 1rem 0;
+	background: -webkit-gradient(linear,left bottom, left top,from(#E2E1E2),color-stop(7%, #E6E4E5),color-stop(8%, #E2E1E2),to(#E2E1E2));
+	background: -webkit-linear-gradient(bottom,#E2E1E2 0%,#E6E4E5 7%,#E2E1E2 8%,#E2E1E2 100%);
+	background: -o-linear-gradient(bottom,#E2E1E2 0%,#E6E4E5 7%,#E2E1E2 8%,#E2E1E2 100%);
+	background: linear-gradient(to top,#E2E1E2 0%,#E6E4E5 7%,#E2E1E2 8%,#E2E1E2 100%);
+}
+.wrap{
+	margin: 0 auto;
+	background: url(../img/content/shoes.jpg) center no-repeat;
+}
+.align-center{
+	text-align: center;
+}
+.prod-desc-caption{
+	margin: 0 0 2rem 0;
+}
+.wrap-content{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.prod-content{
+	text-align: center;
+	padding: 2.5rem 2.5%;
+	width: 100%;
+}
+.content-items{
+	position: relative;
+	margin: 0 0 1.3rem 0;
+	padding: 1.7rem;
+	background: #fff;
+	border-radius: 7px;
+}
+.content-items h3{
+	font:400 1.8rem/2.8rem 'Yantramanav', sans-serif;
+}
+.content-items p{
+	font:300 1.8rem/2.6rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-location*******************************
+************************************************************************/
+.location{
+	padding:9.5rem 0 0 0;
+}
+.wrapper-location{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+	margin: 0 auto;
+}
+.location-header{
+	margin: 0;
+}
+.location-text{
+	margin: 0 0 8rem 0;
+}
+.location-items{
+	text-align: center;
+	margin:0 0 4rem 0;
+	width:100%;	
+}
+.location-items p{
+	font:300 1.5rem/2.2rem 'Yantramanav', sans-serif;
+}
+.location-site{
+	font:300 1.5rem/2.2rem 'Yantramanav', sans-serif;
+	color: #1faa50;
+	text-decoration: none;
+}
+/***************SECTION-contact*******************************
+************************************************************************/
+.contact{
+	text-align: center;
+	padding: 8rem 0;
+}
+.contact-caption{
+	font-size: 2.4rem;
+	margin: 0 0 2.3rem 0;
+}
+.contact-info{
+	font:300 1.8rem/2.2rem 'Yantramanav', sans-serif;;
+	margin: 0 0 5rem 0;
+}
+.contacts li{
+	margin:0 0 2rem 0;
+	text-align: center;
+}
+.mail-link{
+	font:300 1.8rem/2.2rem 'Yantramanav', sans-serif;
+	color: #1faa50;
+	text-decoration: none;
+}
+/***************SECTION-sing-up*******************************
+************************************************************************/
+.sing-up{
+	background:#F3F3F3;
+	padding: 13.5rem 0 11.5rem 0;
+	text-align: center;
+}
+.sing-up-caption{
+	margin: 0 0 2rem 0;
+}
+.sing-up-text{
+	margin: 0 0 4.5rem 0;
+	font:300 2.2rem/3rem 'Yantramanav', sans-serif;
+}
+.sing-up-email{
+	width: 210px;
+	padding: 1rem 1rem 1rem 2.5rem;
+	border: none;
+	border-radius: 30px 0 0 30px;
+}
+.sing-up-submit{
+	font:400 2rem/2rem 'Nunito', sans-serif;
+	border: none;
+	background: #00AD49;
+	padding: .6rem 2rem .6rem 2rem;
+	border-radius: 0 30px 30px 0;
+	margin:0 0 0 -.5rem;
+	color: #fff;
+}
+.form-sing-up{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+/***************SECTION-footer*******************************
+************************************************************************/
+.footer{
+	color:#fff;
+	font:400 1.4rem/2rem 'Yantramanav', sans-serif;
+	padding: 1.5rem 0 1.5rem 3.6rem;
+	background: #DDD;
+}
+/* Extra Small Devices, Phones **************************************************************************************************************************************************************************/
+/* Extra Small Devices, Phones **************************************************************************************************************************************************************************/
+/* Extra Small Devices, Phones **************************************************************************************************************************************************************************/
+/* Extra Small Devices, Phones **************************************************************************************************************************************************************************/
+/* Extra Small Devices, Phones **************************************************************************************************************************************************************************/
+/* Extra Small Devices, Phones **************************************************************************************************************************************************************************/
+/* Extra Small Devices, Phones **************************************************************************************************************************************************************************/
+@media only screen and (min-width : 480px) {
+/***************head-slider******************************
+****************************************************************/
+.head-sing-up-email{
+	width: 310px;
+	padding: 2rem 2rem 2rem 4.5rem;
+}
+.head-sing-up-submit{
+	padding: 2rem 5rem 2rem 4rem;
+}
+/***************SECTION-location*******************************
+************************************************************************/
+.location-items{
+	text-align: center;
+	margin:0 0 4rem 0;
+	width:50%;	
+}
+/***************SECTION-contact*******************************
+************************************************************************/
+.contacts{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.contacts li{
+	margin: 0 11rem 0 0;
+}
+.contacts li:last-child{
+	margin: 0;
+}
+/***************SECTION-sing-up*******************************
+************************************************************************/
+.sing-up-submit{
+	padding: 2rem 5rem 2rem 4rem;
+}
+.sing-up-email{
+	width: 310px;
+	padding: 2rem 2rem 2rem 4.5rem;
+}
+}
+/* Small Devices, Tablets **************************************************************************************************************************************************************************/
+/* Small Devices, Tablets **************************************************************************************************************************************************************************/
+/* Small Devices, Tablets **************************************************************************************************************************************************************************/
+/* Small Devices, Tablets **************************************************************************************************************************************************************************/
+/* Small Devices, Tablets **************************************************************************************************************************************************************************/
+/* Small Devices, Tablets**************************************************************************************************************************************************************************/
+/* Small Devices, Tablets **************************************************************************************************************************************************************************/
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+body{
+	font:300 2.6rem/3rem 'Yantramanav', sans-serif;
+}
+h2{
+	font:300 5rem/5.8rem 'Nunito', sans-serif;
+}
+h3{
+	font:400 3.6rem/4.4rem 'Yantramanav', sans-serif;
+}
+p{
+	font:300 2.6rem/3.4rem 'Yantramanav', sans-serif;
+}
+/***************HEADER******************************
+****************************************************************/
+.logo{
+	width: 142px;
+	height: 57px;
+	background: url(../img/design/logot.png) left top/contain no-repeat;
+}
+/***************head-slider******************************
+****************************************************************/
+.head-slider h1{
+	font:300 7rem/8rem 'Nunito', sans-serif;
+	margin:0 0 2rem 0;
+}
+.head-slider p{
+	font:300 2.6rem/3.7rem 'Yantramanav', sans-serif;
+}
+.head-sing-up-submit{
+	font:400 3rem/3rem 'Nunito', sans-serif;
+	padding: 1.6rem 5rem 1.6rem 4rem;
+}
+/***************SECTION-about-plaes******************************
+****************************************************************/
+.about-plae p {
+	font:300 2.6rem/3.4rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-the-range*******************************
+****************************************************************/
+.name-product{
+	font:300 2.8rem/3.8rem 'Nunito', sans-serif;
+}
+.number-position{
+	font:300 2.8rem/3.2rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-Product-description*******************************
+************************************************************************/
+.content-items p{
+	font:300 2.5rem/3.2rem 'Yantramanav', sans-serif;
+}
+.content-items h3{
+	font:400 2.6rem/3.4rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-location******************************
+************************************************************************/
+
+.location-site{
+	font:300 2.5rem/3.2rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-contact*******************************
+************************************************************************/
+
+.mail-link{
+	font:300 2.8rem/3.2rem 'Yantramanav', sans-serif;
+}
+.contact-caption{
+	font-size: 3.4rem;
+	margin: 0 0 2.3rem 0;
+}
+.contact-info{
+	font:300 2.8rem/3.2rem 'Yantramanav', sans-serif;;
+}
+/***************SECTION-sing-up*******************************
+************************************************************************/
+
+.sing-up-text{
+	font:300 3.2rem/4rem 'Yantramanav', sans-serif;
+}
+.sing-up-submit{
+	font:400 3rem/3rem 'Nunito', sans-serif;
+}
+}
+/* Medium Devices, Desktops**************************************************************************************************************************************************************************/
+/* Medium Devices, Desktops**************************************************************************************************************************************************************************/
+/* Medium Devices, Desktops**************************************************************************************************************************************************************************/
+/* Medium Devices, Desktops**************************************************************************************************************************************************************************/
+/* Medium Devices, Desktops**************************************************************************************************************************************************************************/
+/* Medium Devices, Desktops**************************************************************************************************************************************************************************/
+/* Medium Devices, Desktops**************************************************************************************************************************************************************************/
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large Devices, Wide Screens  **************************************************************************************************************************************************************************/
+/* Large Devices, Wide Screens  **************************************************************************************************************************************************************************/
+/* Large Devices, Wide Screens  **************************************************************************************************************************************************************************/
+/* Large Devices, Wide Screens  **************************************************************************************************************************************************************************/
+/* Large Devices, Wide Screens  **************************************************************************************************************************************************************************/
+/* Large Devices, Wide Screens  **************************************************************************************************************************************************************************/
+/* Large Devices, Wide Screens  **************************************************************************************************************************************************************************/
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1170px) {
+body{
+	font:300 1.6rem/2.4rem 'Yantramanav', sans-serif;
+}
+h2{
+	font:300 3rem/3.8rem 'Nunito', sans-serif;
+}
+h3{
+	font:400 1.6rem/2.4rem 'Yantramanav', sans-serif;
+}
+p{
+	font:300 1.6rem/2.4rem 'Yantramanav', sans-serif;
+}
+/***************HEADER******************************
+****************************************************************/
+.header{
+	top:35px;
+	left: 35px;
+}
+.logo{
+	width: 142px;
+	height: 57px;
+}
+/***************head-slider******************************
+****************************************************************/
+.wrpa-head{
+	padding: 0;
+	width: 50%;
+}
+.head-slider h1{
+	font:300 6rem/7rem 'Nunito', sans-serif;
+}
+.head-slider p{
+	font:300 2rem/2.7rem 'Yantramanav', sans-serif;
+}
+.head-sing-up-email{
+	width: 310px;
+	padding: 1.6rem 2rem 1.6rem 4.5rem;
+}
+.head-sing-up-submit{
+	font:400 2rem/2rem 'Nunito', sans-serif;
+	padding: 1.6rem 5rem 1.6rem 4rem;;
+}
+/*******************************SLIDER**************/
+.slick-dots{
+	display: block;
+	z-index:2000;
+	position:absolute;
+	right: 54px;
+	top:calc(50% - 86px);
+}
+  .slick-dots li{
+  	position: relative;
+  	z-index:1000;
+	cursor:pointer;
+	width:8px;
+	border-radius: 50%;
+	height:8px;
+	text-indent: -9999px;
+	background:#fff;
+	margin:0 0 2rem 0;
+ }
+ .slick-dots li:hover ,  .slick-dots li.slick-active{
+ 	margin:0 0 1.6rem 0;
+ 	right: 2px;
+	width: 12px;
+	height: 12px;
+ }
+/***************SECTION-about-plaes******************************
+****************************************************************/
+.about-plaes article img{
+	-o-object-fit: cover;
+	   object-fit: cover;
+	width: 100%;
+    height: 100%;
+}
+.about-plaes article{
+	width: 50%;
+}
+.about-plaes article p{
+	text-align: left;
+}
+.about-plae{
+	padding: 12rem 11.5rem 5rem 11.5rem;
+}
+.about-plae h2{
+	margin: 0 0 4.7rem 0;
+}
+.about-plae p {
+	margin: 0 0 3.7rem 0;
+	font:300 1.6rem/2.4rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-about-plaes-2block******************************
+****************************************************************/
+.about-plae-2block{
+	padding:20rem 16rem 20rem 15.5rem;
+}
+.about-plae-2block h2{
+	margin: 0 0 12.5rem 0;
+}
+.about-plae-2block .about-plae-2block-text{
+	margin:0 0 10.8rem 0;
+	text-align: center;
+}
+
+/***************SECTION-about-plaes-3block******************************
+****************************************************************/
+.about-plae-3block{
+	padding: 0 17.7rem;
+}
+.about-plae-3block p{
+	margin:0 0 10.8rem 0;
+}
+.about-plae-3block .about-plae-3block-text{
+	text-align: center;
+}
+/***************SECTION-the-range*******************************
+****************************************************************/
+.section-the-range{
+	padding: 8.5rem 0;
+}
+.section-the-range h2{
+	margin: 0 0 2rem 0;
+}
+.text-product{
+	margin: 0 0 14rem 0;
+}
+.wrapper-product{
+	margin:0 0 12rem 0;
+}
+.name-product{
+	font:300 2.4rem/3.8rem 'Nunito', sans-serif;
+	margin: 0 0 4rem 0;
+}
+.number-position{
+	font:300 1.8rem/2.2rem 'Yantramanav', sans-serif;
+}
+/***************SECTION-Product-description*******************************
+************************************************************************/
+.wrap{
+	width: 1160px;
+	margin: 0 auto;
+	height: 798px;
+	background: url(../img/content/shoes.jpg) center no-repeat;
+}
+.wrap-content{
+	-webkit-box-align:stretch;
+	    -ms-flex-align:stretch;
+	        align-items:stretch;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:row;
+	        flex-direction:row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.prod-content{
+	text-align: left;
+	padding: 0;
+	width: 230px;
+}
+.content-items p{
+	font:300 1.5rem/2.2rem 'Yantramanav', sans-serif;
+}
+.content-items h3{
+	font:400 1.6rem/2.4rem 'Yantramanav', sans-serif;
+}
+/***********************LEFT CONTENT LINE********/
+.content-items:before{
+	content: "";
+	display: block;
+	position: absolute;
+}
+.content-items:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 0 4px rgba(255,255,255,0.5);
+	        box-shadow: 0 0 0 4px rgba(255,255,255,0.5);
+}
+.pull-tab:before{
+	border-top:1px solid #fff;
+	border-right:1px solid #fff;
+	width: 84px; 
+	height: 122px;
+	top:50%;
+	right:-84px;
+}
+.pull-tab:after{
+	right:-91px;
+	bottom:-69px;
+}
+.shock-absorption:before{
+	border-top:1px solid #fff;
+	width: 90px;
+	height: 1px;
+	bottom: 40%;
+	right: -90px;
+}
+.shock-absorption:after{
+	right:-101px;
+	bottom:61px;
+}
+.custom-fit:before{
+	border-top:1px solid #fff;
+	width: 105px;
+	height: 1px;
+	top: 25px;
+	right: -105px;
+}
+.custom-fit:after{
+	right:-115px;
+	top:17px;
+}
+.eco-friendly:before{
+	border-right:1px solid #fff;
+	border-bottom: 1px solid #fff;
+	width: 225px;
+	height: 59px;
+	top:-40px;
+	right: -225px;
+}
+.eco-friendly:after{
+	right:-232px;
+	top:-49px;
+}
+/***********************RIGHT CONTENT LINE********/
+.machine-washable:before{
+	border-top:1px solid #fff;
+	border-left: 1px solid #fff;
+	width: 327px;
+	height: 145px;
+	top:50%;
+	left: -327px;	
+}
+.machine-washable:after{
+	left:-334px;
+	bottom:-116px;
+}
+.anatomical-form:before{
+	border-top:1px solid #fff;
+	border-left: 1px solid #fff;
+	width: 275px;
+	height: 113px;
+	top:50%;
+	left: -275px;	
+}
+.anatomical-form:after{
+	left:-282px;
+	bottom: -64px;
+}
+.flexible-sole:before{
+	border-top:1px solid #fff;
+	width: 100px;
+	height: 1px;
+	top:44%;
+	left: -100px;	
+}
+.flexible-sole:after{
+	left:-109px;
+	top:38%;
+}
+.passive-traction:before{
+	border-bottom:1px solid #fff;
+	border-left: 1px solid #fff;
+	width: 182px;
+	height: 45px;
+	top:10px;
+	left: -182px;	
+}
+.passive-traction:after{
+	left:-189px;
+	top:4px;
+}
+.toe-guard:before{
+	border-bottom:1px solid #fff;
+	width: 367px;
+	height: 1px;
+	top:10px;
+	left: -367px;
+}
+.toe-guard:after{
+	left:-378px;
+	top:4px;
+}
+/***************SECTION-location*******************************
+************************************************************************/
+.wrapper-location{
+	width: 1040px;
+}
+.location-header{
+	margin: 0 0 2rem 0;
+}
+.location-items{
+	margin:0 calc(8% /5) 6rem 0;
+	width: calc(92% / 5);	
+}
+.location-items p{
+	font:300 1.5rem/2.2rem 'Yantramanav', sans-serif;
+}
+.location-site{
+	font:300 1.5rem/2.2rem 'Yantramanav', sans-serif;
+}
+.location-site:hover{
+	text-decoration: underline;
+}
+.wrapper-location article:nth-of-type(5n){
+	margin:0 0 6rem 0;
+}
+/***************SECTION-contact*******************************
+************************************************************************/
+.contact-info{
+	font:300 1.8rem/2.2rem 'Yantramanav', sans-serif;;
+	margin: 0 0 5rem 0;
+}
+.contacts{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.contacts li{
+	margin: 0 11rem 0 0;
+}
+.contacts li:last-child{
+	margin: 0;
+}
+.mail-link{
+	font:300 1.8rem/2.2rem 'Yantramanav', sans-serif;
+}
+.mail-link:hover{
+	text-decoration: underline;
+}
+/***************SECTION-sing-up*******************************
+************************************************************************/
+.sing-up-caption{
+	margin: 0 0 2rem 0;
+}
+.sing-up-text{
+	margin: 0 0 4.5rem 0;
+	font:300 2.2rem/3rem 'Yantramanav', sans-serif;
+}
+.sing-up-email{
+	width: 310px;
+	padding: 2rem 2rem 2rem 4.5rem;
+}
+.sing-up-submit{
+	font:400 2rem/2rem 'Nunito', sans-serif;
+	padding: 2rem 5rem 2rem 4rem;
+}
+.form-sing-up{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+/***************SECTION-footer*******************************
+************************************************************************/
+.footer{
+	font:400 1.4rem/2rem 'Yantramanav', sans-serif;
+}
+}

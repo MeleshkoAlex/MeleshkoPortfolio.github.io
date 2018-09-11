@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900");
+*{-webkit-box-sizing: border-box;
+box-sizing: border-box;}
+html{
+	font-size: 62.5%;
+}
+i {
+	font-size: 25px;
+}
+
+@font-face {
+	font-family: "Taiga";
+	src: url("../fonts/Taiga.otf");
+}
+/*===================================HEADER SECTION=   PHONE==================================*/
+.first-section{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+    padding: 2rem 5vw;
+	text-align: center;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	height: 100vh;
+	z-index: 2;
+	position: relative;
+	background:url(../img/design/background.jpg) center/cover fixed no-repeat;
+}
+.first-section:before{
+	content:"";
+	display: block;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(16, 23, 32, 0.7);
+}
+.face{
+	width: 20rem;
+	border-radius:100%;
+	-webkit-box-shadow: 0px 0px 0px 11px rgba(215, 215, 215, 0.3);
+    box-shadow: 0px 0px 0px 11px rgba(215, 215, 215, 0.3);
+    margin: 0 0 4rem 0;
+}
+.name{
+	font:bold 2.4rem/5rem "Taiga", sans-serif;
+	color: #fff;
+	margin: 0 0 2rem 0;
+}
+.infotext{
+	color: #1f98ad;
+	font: 1.8rem/3rem "Raleway";
+}
+.front-end{
+	margin: 0 0 3rem 0;
+}
+/*
+.button-top{
+	font:1.4rem/4rem "Raleway";
+	padding: 1rem 5rem;
+	border: 0.2rem solid #bebebe;
+	border-radius: 10px;
+	text-decoration: none;
+	color: #fff;
+}
+.button-top:hover{
+	color: #393533;
+	background-color: #898583;
+}
+.button-top-left{
+	margin:0 0.5rem 0 0;
+}
+.button-top-right{
+	margin:0 0 0 0.5rem;	
+}*/
+/*===========================================ABOUT ME SECTION   PHONE======================*/
+.aboutme{
+	background-color: #ECF0F1;
+	color: #595959;
+	padding: 5%;
+}
+.caption{
+	position: relative;
+	text-transform: uppercase;
+	font: 900 3rem/5.1rem "Raleway";
+    text-align: center;
+    color: #595959;
+    margin: 0 0 4.5rem 0;
+}
+.caption:after{
+	content: "";
+    display: block;
+    position: absolute;
+    width: 10rem;
+    height: .8rem;
+    top: 5rem;
+    left: calc(50% - (10rem / 2));
+    background-color: #5CCDD9;
+}
+.aboutme h2,h3{
+	text-align: center;
+
+}
+.aboutme h2{
+	font:800 2.4rem/4rem "Raleway";
+}
+.aboutme h3{
+	font:400 2.4rem/4rem "Raleway";
+}
+.storyaboutme{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.storyaboutme p{
+    width: 100%;
+    text-align: justify;
+    margin: 0 0 3rem 0;	
+    font: 400 2rem/3rem "Raleway";
+} 
+.imgcod{
+	width: 100%;
+
+}
+/*=======================================   technologystack PHONE   ==========================*/
+.technologystack{
+	z-index: 2;
+	position: relative;
+	background:url(../img/design/background2.jpg) center/cover fixed no-repeat;
+	padding: 5%;
+}
+.technologystack:before{
+	content:"";
+	display: block;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: -11;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(16, 23, 32, 0.7);
+}
+.stack{
+	color: #fff;
+}
+.wrapers{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+}
+.skilldescription{
+	width: 100%;
+	margin: 0 0 2rem 0;
+}
+.skilldescription h2{
+	font:800 2.2rem/4rem "Raleway";
+	text-align: center;
+	color: #f3f3f3;
+}
+.skilldescription p{
+    font:400 1.6rem/2.4rem "Raleway";
+    color: #f3f3f3;
+    text-align: center;
+}
+/*=======================================   portfolio PHONE   ==========================*/
+.portfolio{
+	padding: 5%;
+}
+.portfolio-items{
+	width: 100%;
+	height: 25rem;
+	position: relative;
+	overflow: hidden;
+}
+.portfolio-items a{
+	padding: 3rem !important;
+	text-align: center;
+    position: absolute;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-decoration: none;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1.5rem;
+    color: #9f9e9e;
+    background: rgba(0,0,0,0.3);
+}
+.portfolio-items a .plus{
+	font: 200 10rem/4rem "Raleway";
+	color:rgba(243, 243, 243, 0.7);
+	position: relative;
+	z-index: 2;
+	margin: 0 0 2rem 0;
+}
+.portfolio-items a .projectname{
+	font:300 2.4rem/3.6rem "Raleway";
+	color: #E4E4E4;
+	margin: 0 0 2rem 0;
+}
+.portfolio-items a p{
+    font:600 1.8rem/2.6rem "Raleway";
+    color: #E4E4E4;
+}
+.plus:after{
+	content: "";
+	display: block;
+	position: absolute;
+	top:calc(50% - 30px);
+	left:calc(50% - 30px);
+	width: 60px;
+	height: 60px;
+	z-index: -1;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.portfolio-items img{
+	width: 100%;
+	height: 100%;
+}
+@media only screen and (min-width : 375px) {
+/*===================================HEADER SECTION=   PHONE==================================*/
+.face{
+	width: 25rem;
+}
+.name{
+	font:bold 3.4rem/5rem "Taiga", sans-serif;
+}
+.infotext{
+	font: 2rem/3.5rem "Raleway";
+}
+.button-top{
+	font:2.4rem/4rem "Raleway";
+	padding: 1rem 5rem;
+	border: 0.2rem solid #bebebe;
+	border-radius: 10px;
+	text-decoration: none;
+	color: #fff;
+}
+}
+/*============================================================  IPAD   =============*/
+@media screen and (min-width: 768px){
+/*===================================     HEADER SECTION IPAD   ==================================*/
+.face{
+	width: 37rem;
+	border-radius:100%;
+    margin: 0 0 4rem 0;
+}
+.name{
+	font:bold 6.4rem/7rem "Taiga", sans-serif;
+}
+.infotext{
+	font: 4rem/6rem "Raleway";
+}
+.button-top{
+	font:3.4rem/4rem "Raleway";
+	padding: 1rem 7rem;
+}
+/*===========================================   ABOUT ME SECTION IPAD   ======================*/
+.imgcod{
+	height: 45rem;
+}
+.aboutme h2{
+	font:800 3.4rem/5rem "Raleway";
+}
+.aboutme h3{
+	font:400 3.4rem/5rem "Raleway";
+}
+.storyaboutme p{
+    font: 400 3rem/4rem "Raleway";
+}
+.caption{
+	font: 900 4rem/5.1rem "Raleway";
+}
+.caption:after{
+    top: 6rem;
+}
+.wrapers{
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.skilldescription{
+	width: calc((100% - 9.4675%) / 2);
+	margin: 0 0 2rem 0;
+}
+
+/*=======================================   portfolio IPAD   ==========================*/
+.portfolio-items{
+	width: 49.929%;
+}
+}
+/*=======================================   technologystack IPAD   ==========================*/
+
+
+/*============================================================  LAPTOP   =============*/
+@media screen and (min-width: 1170px) {
+
+/*===================================     HEADER SECTION LAPTOP   ==================================*/
+.face{
+	width: 27rem;
+}
+.wrap{
+	padding: 5rem 5vw;
+	height: 110vh;
+}
+.name{
+	font:bold 4.4rem/5.1rem "Taiga", sans-serif;
+}
+.infotext{
+	font: 2.4rem/4rem "Raleway";
+}
+.button-top{
+	font:2.4rem/4rem "Raleway";
+}
+.storyaboutme p{
+    font: 400 2rem/3rem "Raleway";
+}
+/*===========================================   ABOUT ME SECTION LAPTOP   ======================*/
+
+.wraper{
+	width: 1170px;
+    margin: 0 auto;
+}
+.aboutme h2,h3{
+	text-align: left;	
+}
+.storyaboutme{
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:row;
+	        flex-direction:row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.storyaboutme p{
+    width: 50%;
+    text-align: left;
+    margin: 0 3rem 0 0;	
+} 
+.imgcod{
+	width: 50%;
+	height: 35rem;
+}
+.caption{
+	font: 900 3rem/5.1rem "Raleway";
+}
+.caption:after{
+    top: 5rem;
+}
+/*=======================================   technologystack LAPTOP   ==========================*/
+.wrapers{
+	width: 1170px;
+    margin: 0 auto;
+    	justify-content: flex-start;
+}
+.skilldescription{
+	width: calc((100% - 9.4675%) / 3);
+}
+/*=======================================   portfolio LAPTOP   ==========================*/
+.portfolio-items{
+	width: 25%;
+}
+.portfolio-items a{
+	bottom: -100%;
+    -webkit-transition: all 1.1s;
+    -o-transition: all 1.1s;
+    transition: all 1.1s;
+}
+.portfolio-items:hover a {
+    bottom:0;
+}
+}

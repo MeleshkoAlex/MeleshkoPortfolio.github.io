@@ -1,0 +1,419 @@
+*{-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+html{
+	font-size: 62.5%;
+}
+body{
+	font:1.4rem/2rem 'Roboto', sans-serif;;
+	background-color:#F8F8F8;
+}
+/************************header*************************/
+#header{
+	background: #fff;
+	padding: 1rem 3rem;
+}
+.row{
+	margin: 0 0 1.5rem 0;
+	display: flex;
+	justify-content:space-between;
+}
+.left-header{
+	display: flex;
+	width: 30rem;
+	align-items: center;
+}
+.humb{
+	cursor: pointer;
+	display: inline-block;
+	width: 3rem;
+	height: 2.4rem;
+	background: url(../img/design/MENU-copy-3.png) no-repeat;
+	margin: 0  3rem 0 0;
+}
+.logo{
+	width: 20.9rem;
+	height: 5.9rem;
+	display:block;
+	background: url(../img/design/LOGO.png) no-repeat;
+}
+.search{
+	padding: 2rem 0 0 0;
+	width: 42rem;
+	display: flex;
+	align-items: center;
+}
+input[type="search"]{
+	border: none;
+	border-bottom:2px solid #00ADA5; 
+	outline: none;
+	width: 100%;
+	padding: 0 0 .7rem;
+	font:400 1.6rem/2rem 'Roboto', sans-serif;
+}
+input[type="submit"]{
+	outline: none;
+	text-indent:-9999px;
+	border: none;
+	padding: 0 0 0 1rem;
+	width:2.7rem;
+	height: 2.7rem; 
+	background: url("../img/design/Shape-2.png") center no-repeat;
+}
+.right-header{
+	width: 15rem;
+}
+.login{
+	color: #0DACA4;
+	font:bold 1.6rem/2rem 'Roboto', sans-serif;
+	text-transform: uppercase;
+	margin:0 2.5rem 0 0;
+	text-decoration: none;
+}
+.login:hover{
+	color: #88D9D5;
+}
+.basket{
+	display: inline-block;
+	width: 6rem;
+	height: 6rem;
+	padding: 2rem 0 0 3rem;
+	text-align: center;
+	background:url(../img/design/Shape-3.png);
+	color: #fff;
+	text-decoration: none;
+	font:bold 1.6rem/2rem 'Roboto', sans-serif;
+} 
+/******************NAV*************************/
+.nav{
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 3rem;
+}
+.navigation li{
+	padding: 0 1.6rem;
+	font: 400 1.6rem/2rem 'Roboto', sans-serif;
+	border-right: 2px solid #26B8B2;
+}
+.navigation li:nth-child(1){
+	padding: 0 1.6rem 0 0;
+}
+.navigation li a{
+	text-decoration: none;
+	color: #fff;
+	font:400 1.6rem/2rem 'Roboto', sans-serif;
+}
+.navigation li a:hover{
+	text-decoration: underline;
+}
+.flex{
+	display: flex;
+}
+.contact li{
+	padding: 0 1.6rem;
+	font: 400 1.2rem/2rem 'Roboto', sans-serif;
+	color: #fff;
+}
+.contact li:nth-child(1){
+	padding: 0 1.6rem 0 0;
+}
+/*************************************MAIN*****************/
+.main{
+	padding: 3rem 0 0 0;
+	margin: -5rem 0 0 0;
+	background: url(../img/design/Ellipse-8.png) top left no-repeat;
+	background-size: 100% 600px;
+}
+.section-slider{
+	padding: 0 0 5rem 0;
+}
+.line-shadow{
+	display: block;
+	width: 100%;
+	height: 1rem;
+	box-shadow:0px 9px 10px 0px rgba(0, 0, 0, 0.3);	
+	margin: 0 0 6rem 0;
+}
+.slider{
+	position: relative;
+	width: 912px;
+	margin: 0 auto;
+	height: 450px;
+} 
+.slider-items{
+ 	width: 100%;
+ 	height: 100%;
+ } 
+.slider-item{
+ 	display:block;
+ 	width: 40%;
+	height: 100%;
+	float: left;
+ }
+
+.slider-img{
+	border-radius: 5px;
+	float: right;
+ 	display:block;
+ 	position: relative;
+ 	width: 60%;
+ 	height: 100%;
+ 	z-index: 3;
+ }
+ .slider-img:after{
+	z-index: 2;
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 20px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+ }
+  .slider-img:before{
+	z-index: 2;
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 20px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+ }
+.slider-items:after{
+	display:block;
+	clear:both
+	content:"";
+}
+
+.slick-arrow{
+ 	overflow: hidden;
+	border-radius: 50%;
+	background: url("../img/design/Rectangle-9.png") center no-repeat;
+	width: 41px;
+	height: 41px;
+	text-indent: 9999px;
+	outline: none;
+	border:none;
+	position: absolute;
+ }
+ .slick-prev{
+ 	transform: rotate(180deg);
+ 	top: calc(50% - (41px / 2));
+ 	left: -100px;
+ }
+ .slick-next{
+ 	top: calc(50% - (41px / 2));
+ 	right: -100px;
+ }
+ .slick-dots{
+	position: absolute;
+	bottom: 0;
+  }
+ .slick-dots li{
+	cursor: pointer;
+	top:-20px;
+    display: inline-block;
+	width:20px;
+	border-radius: 50%;
+	height:20px;
+	text-indent: -9999px;
+	background:rgba(255, 255, 255, 0.2);
+	margin:0 2rem 0 0;
+ }
+ .slick-dots li:hover ,  .slick-dots li.slick-active{
+ 	border:1px solid #fff;
+	background:rgba(255, 255, 255, 0.0);
+ }
+ .slider-item h2 a{
+ 	display: block;
+ 	font:bold 3.6rem/4rem 'Roboto', sans-serif;
+ 	color: #fff;
+ 	text-decoration: underline;
+ 	margin: 0 0 2rem 0;
+ }
+.atoy{
+	display: block;
+	width: 13.4rem;
+    height: 3.9rem;
+  	border:1px solid #fff;
+  	border-radius: 50px 50px;
+  	padding: 1rem 2rem 1.1rem 5rem;
+  	color: #fff;
+  	margin: 0 0 2.5rem 0;
+  	background: url("../img/design/Layer-40-copy-18.png") 18px 7px no-repeat;
+  }
+  .slider-item p{
+  	color: #fff;
+  	font:400 1.4rem/2rem "Roboto", sans-serif;
+  	margin: 0 0 15.5rem 0;
+  }
+  .button-buy{
+  	display: block;
+  	width: 18.5rem;
+  	height: 6rem;
+  	border-radius: 50px 50px;
+  	background:linear-gradient(to top, #FCC8B5, #FFFEFE);
+  	text-align: center;
+  	padding: 1.3rem 0;
+  	color: #000;
+  	text-decoration: none;
+  	font: bold 2.4rem/3rem "Roboto" , sans-serif;
+  }
+  .button-buy:hover{
+  	transition: all 11s;
+  	background:linear-gradient(to top, #000,#FCC8B5 );
+  }
+/*************************Secttion-Categoties***************/
+.section-categories{
+	padding: 3rem 0;
+	width: 1100px;
+	margin: 0 auto;
+}
+.items-categories{
+	width: 100%;
+	border-bottom: 1px dotted #000;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 5rem 0;
+}
+.section-categories article{
+	width: 26%;
+	padding: 0 0 0 12rem;
+	position: relative;
+	margin: 0 0 2rem 0;
+
+}
+.section-categories article a{
+	display: block;
+	font:bold 2.4rem/3rem 'Roboto', sans-serif;
+	color: #00ada5;
+	text-decoration: none;
+	margin: 0 0 1.5rem 0;
+}
+.section-categories article a:hover{
+	text-decoration: underline;
+}
+.section-categories article a:before{
+	content: "";
+	display: block;
+	width: 10rem;
+	height: 10rem;
+	top:0;
+	left:0;
+	position: absolute;
+}
+.doll:before{
+	background: url(../img/design/doll.png) top left no-repeat;
+}
+
+.bottle:before{
+	background: url(../img/design/bottle.png) top left no-repeat;
+}
+.pen:before{
+	background: url(../img/design/pen.png) top left no-repeat;
+}
+.underwater-mask:before{
+	background: url(../img/design/underwater-mask.png) top left no-repeat;
+}
+.T-shirt:before{
+	background: url(../img/design/T-shirt.png) top left no-repeat;
+}
+.racket1:before{
+	background: url(../img/design/racket1.png) top left no-repeat;
+}
+.furniture:before{
+	background: url(../img/design/furniture.png) top left no-repeat;
+}
+.bike:before{
+	background: url(../img/design/bike.png) top left no-repeat;
+}
+.book:before{
+	background: url(../img/design/book.png) top left no-repeat;
+}
+/******************SECTION*******************/
+.news{
+	padding: 0 0 2rem 0;
+	border-radius: 30%;
+	border-bottom: 1px dotted #E5E5E5;
+	position: relative;
+	text-align: center;
+	color: #666666;
+	font:400 6rem/7rem 'Pattaya', sans-serif;
+}
+.news a{
+	position: absolute;
+	top: -24px;
+	right: 28%;
+	padding: 1.2rem 2rem;
+	border-radius: 50px 50px 50px 0;
+	border:1px solid #00ada5;
+    color: #00ada5;
+    font:500 1.4rem/2rem "Roboto" , sans-serif;
+}
+.buy{
+	display: block;
+  	width: 20rem;
+  	height: 6rem;
+  	border-radius: 50px 50px;
+  	background:linear-gradient(to top, #FCC8B5, #FFFEFE);
+  	text-align: center;
+  	padding: 1.3rem 0;
+  	color: #000;
+  	text-decoration: none;
+  	font: bold 2.4rem/3rem "Roboto" , sans-serif;
+}
+.buy:hover{
+  	transition: all 11s;
+  	background:linear-gradient(to top, #000,#FCC8B5 );
+  }
+.content-news{
+	display: flex;
+	justify-content:space-between;
+  }
+.img-content{
+ 	width: 48%;
+ 	height: 50%;
+ }
+.row-goods{
+	width: 48%;
+}
+ .button-buys{
+ 	padding: 0 0 0 2.5rem;
+ 	width: 100%;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border:1px solid #FFE2CC;
+ 	border-radius: 50px 50px;
+ }
+ .button-buys span{
+ 	color: #000;
+ 	font:bold 3rem/4rem "Roboto" , sans-serif;
+ }
+ .vendor-code{
+ 	font:400 1rem/2rem "Roboto",sans-serif;
+ 	color: rgba(0,0,0,0.33);
+ }
+ .row-goods h3{
+ 	display: flex;
+ 	justify-content: space-between;
+
+ }
+ .Product-Name{
+ 	color: #00ada5;
+ 	font: bold 3rem/4rem "Roboto" ,sans-serif;
+ }
+
+ .atoys{
+ 	font:500 1.4rem/2rem "Roboto",sans-serif;
+ 	display: block;
+    width: 13.4rem;
+    height: 3.9rem;
+    border: 1px solid  #00ada5;
+    border-radius: 50px 50px;
+    padding: 1rem 2rem 1.1rem 5rem;
+    color:  #00ada5;
+    margin: 0 0 2.5rem 0;
+    background: url(../img/design/Layer-40-copy-19.png) 18px 7px no-repeat;
+ }

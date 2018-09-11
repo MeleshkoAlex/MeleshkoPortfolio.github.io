@@ -1,0 +1,323 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	font-family: "Exo",sans-serif;
+	font-size: 62.5%;
+}
+.header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction:column;
+	height: 100vh;
+	background: url("../img/design/header-fon.jpg") center/cover fixed no-repeat;
+}
+.header h1{
+	color: #282828;
+	text-align: center;
+	font:100 6rem "Exo",sans-serif;
+	margin:0 0 3.2rem 0;
+}
+.button{
+	border-radius: 4px;
+	margin:4rem 0 0 0;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	color:#FFF5F5;
+	background-color:#FF6D6D;
+	padding: 1.5rem 5rem; 
+}
+.button:hover{
+	transform: translate(0, 2px); 
+}
+.button:active{
+	padding: 1.5rem 4.8rem; 
+}
+.need{
+	margin:2rem 0 0 0;
+	color: #C4C4C4;
+	font:400 1.4rem "Exo",sans-serif;
+}
+.section{
+	overflow: hidden;
+	height: 100vh;
+}
+.section.top{
+	height: 100vh;
+	background: url("../img/design/fon2.jpg")  right/cover no-repeat;
+}
+.section.top .wrapper{
+	padding: 9.5rem 64rem 0 0;
+	}	
+.wrapper{
+	width: 1160px;
+	margin: 0 auto;
+}
+.wrapper .NEW-DESIGN{
+	margin: 0;
+	color: #ff6d6d;
+	font:500 1.6rem "Exo",sans-serif;
+}
+.wrapper h2{
+	color: #282828;
+	margin:1.6rem 0 0 0;
+	font:400 4rem "Exo",sans-serif;
+}
+.wrapper h2 span{
+	color: #ff6d6d;
+}
+.wrapper p{
+	color:#282828;
+	margin:2rem  0 0 0;
+	font:500 1.6rem/2.6rem "Exo",sans-serif;
+}
+.section.top2{
+	height: 100vh;
+	background: url("../img/design/fon3.jpg") center/cover no-repeat;
+}
+.section.top2 .wrapper{
+	text-align: center;
+	padding: 13.5rem 0 0 0;
+}
+.section.top2 .wrapper .NEW-DESIGN{
+	color: #ff6d6d;
+	font:500 1.6rem "Exo",sans-serif;
+}
+.section.top2 .wrapper h2{
+	color: #282828;
+	margin:1.6rem 0 0 0;
+	font:500 4rem "Exo",sans-serif;
+}
+.wrap{
+	display: flex;
+	justify-content: flex-start;
+	flex-flow:wrap row;
+}
+.wrap article{
+	width: calc((100% - 9.4675%) / 3);
+    margin: 9rem calc(9.4675% / 2) 0 0;
+}
+.wrap article:nth-of-type(3n){
+    margin:9rem 0 0 0;
+}
+.wrap article h3{
+	margin:3rem 0 0 0;
+	color:#282828; 
+	font:500 2.2rem "Exo",sans-serif;
+}
+.wrap article p{
+	color: #282828;
+	font:500 1.6rem "Exo",sans-serif;
+}
+.picture::before{
+	content: "";
+	display: block;
+	width:7.1rem;
+	height:7.1rem;
+	margin: 0 auto;
+	background: url("../img/content/picture.png");
+}
+.airplane::before{
+	content: "";
+	display: block;
+	width:7.1rem;
+	height:7.1rem;
+	margin: 0 auto;
+	background: url("../img/content/airplane.png");
+}
+.bulb::before{
+	content: "";
+	display: block;
+	width:7.1rem;
+	height:7.1rem;
+	margin: 0 auto;
+	background: url("../img/content/bulb.png");
+}
+.section.top3{
+	background: url("../img/design/fon4.jpg") left/cover no-repeat;
+}
+.section.top3 .wrapper{
+	display: flex;
+	justify-content: space-between;
+	padding: 10% 0  0 0;
+}
+.section.top3 .wrapper div{
+	margin:4rem 0 0 0;
+}
+.section.midlle{
+	background: url("../img/design/fon5.jpg") center/cover no-repeat;
+}
+.section.midlle .wrapper .wrap article{
+	text-align: center;
+}
+.section.midlle .wrapper .wrap h2{
+	color: #fff;
+	font:500 2.2rem "Exo",sans-serif;
+}
+.section.midlle .wrapper .wrap span{
+	color: #ff6d6d;
+	font:500 1.6rem "Exo",sans-serif;
+}
+.section.midlle .wrapper .wrap p{
+	color: #fff;
+	font:500 italic 1.6rem "Exo",sans-serif;
+}
+.sponsors{
+	margin: 10rem 0 0 0;
+	display: flex;
+	justify-content: space-between;
+}
+.section.midlle2{
+	background-color: #f6f5f3;
+}
+.section.midlle2 .wrapper{
+	height: 100%;
+	position: relative;
+	text-align: center;
+	padding: 10rem 0 0 0;
+}
+.section.midlle2 .wrapper p{
+	padding: 0 28rem;
+}
+.section.midlle2 .wrapper img{
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 410px)
+}
+/*****=========================== FOOTER ===================*/
+.section.footer1{
+	background-color: #353C69;
+}
+.section.footer1 .wrapper{
+	padding: 15% 0;
+	text-align: center;
+}
+.section.footer1 .wrapper .Over1000{
+	color: #f6f5f3;
+	font:500 4rem "Exo",sans-serif;
+}
+.section.footer1 .wrapper .arrow{
+	position: relative;
+	text-align: right;
+	color: #f6f5f3;
+	font:400 1.6rem "Exo",sans-serif;
+	margin:0 4rem 0 0 ;
+	padding: 1rem 0 1rem 5.6rem;
+}
+
+.section.footer1 .wrapper .arrow:before{
+	content: "";
+	position: absolute;
+	display: block;
+	right: 16rem;
+	width: 5.6rem;
+	height: 4.1rem;
+	background: url("../img/design/ARROW.png")  no-repeat;
+}
+.section.footer1 .wrapper form{
+	margin:3rem 0 0 0;
+	display: flex;
+	justify-content: space-between;
+}
+.section.footer1 .wrapper form input{
+	color: #f6f5f3;
+	font:400 1.6rem "Exo",sans-serif;
+	width: 26rem;
+	height: 5rem;
+	padding: 0 0 0 1rem;
+	border: 1px solid #999CB4;
+	border-radius: 3px;
+	background:#353C69; 
+}
+.section.footer1 .wrapper form .submit{
+	background-color: #FF6D6D;
+	border:none;
+}
+.section.footer1 .wrapper .Services ,a{
+	margin:5rem 0 0 0;
+	color:#f6f5f3;
+	font:400 1.6rem "Exo",sans-serif;
+}
+.section.footerlast{
+	height: 50vh;
+	background: url("../img/design/footer-fon.jpg") right/cover no-repeat;
+}
+
+/*****=========================== FOOTER ===================*/
+.footer-item{
+	padding: 8rem 0 0 0;
+	display:flex;
+	justify-content:flex-start;
+}
+.footer-items{
+	margin: 0 11.5rem 0 0;
+}
+.footer-info{
+	color:#9E9E9E;
+	font:500 1.4rem /2rem "Exo",sans-serif;
+	margin: 0 0 1rem 0;
+}
+.footer-info a{
+	font:500 1.4rem /2rem "Exo",sans-serif;
+	color:#9E9E9E;
+	text-decoration: none;
+	cursor: pointer;
+}
+.footer-info a:hover{
+	text-decoration: underline;
+}
+.social{
+	display: flex;
+}
+.footer-caption{
+	margin: 0 0 2.5rem 0;
+	color:#282828;
+	font:600 2.2rem /3rem "Exo",sans-serif;
+}
+.footer-caption-start{
+	font:600 2.7rem /3rem "Exo",sans-serif;
+}
+.footer-caption-bg{
+	margin: 0 0 0 .4rem;
+	background:url(../Img/design/Polygon-1.png) top left no-repeat;
+	padding: 1rem 1.3rem 1rem 0.5rem;
+	color: #fff;
+}
+.form-footer{
+	position: relative;
+	margin: 0  0 2rem 0;
+}
+.email-footer{
+	text-transform: uppercase;
+	font:400 1.6rem /3rem "Exo",sans-serif; 
+	padding: 0 5.2rem 0 3rem;
+	height: 4.9rem;
+	width: 26.5rem;
+	outline: none;
+	border:1px solid #B8B8BF;
+	background:#F6F6F6;
+	border-radius: 3px;
+}
+.submit-footer{
+	position: absolute;
+	outline: none;
+	top: 0;
+	border: none;
+	right: 0;
+	height:4.9rem;
+	width: 5.2rem;
+	background:url(../Img/design/10.png)  no-repeat;
+	text-indent: -9999px; 
+}
+.social{
+	display: flex;
+	justify-content: center;
+}
+.social li{
+	margin: 0 3rem 0 0;
+}
+.social li a:hover{
+	color:#000;
+}

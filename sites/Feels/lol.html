@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		overflow: hidden;
+	}
+	.hall{
+		left: 0;
+		top:0;
+		display: block;
+		width: 100%;
+		min-height: 100vh;
+		position: fixed;
+		background: #fff;
+		/*overflow: hidden;*/
+		overflow: scroll;
+		transition: 0.5s ease-in-out;
+		z-index: 1000;
+	}
+	.block-time{
+		overflow: scroll;
+	}
+	.head-line-block{
+		width: 100%;
+		height: 60px;
+		padding: 0 20px;
+		background-color: #1f2337;
+	}
+	.back-button{
+		position: absolute;
+		top:15px;
+		left: 30px;
+		width: 28px;
+		height: 28px;
+		border:1px solid transparent;
+		border-radius: 30px;
+		background-color: rgba(99,110,169,.6);
+		background-image: url(../img/design/backsho.png);
+		background-position: 8px center;
+		background-repeat: no-repeat;
+		outline: none;
+	}
+	.back-button:hover{
+		border:1px solid #7F8FE1;
+	}
+
+	.hall-content{
+		display: flex;
+		width: 1300px;
+		overflow-y: scroll;
+		padding: 30px;
+	}
+
+	.hall-prod-capt{
+		text-align: center;
+		margin: 0 0 30px 0;
+		color: #4B76AF;
+		text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+		font-size: 24px !important;
+	}
+
+	@keyframes hall-vis{
+		0%{
+			width:0%;
+			height:0%;
+			top:50%;
+			left: 50%;
+		}
+		100%{
+			width:100%;
+			height:100vh;
+			top:0;
+			left:0;
+		}
+	}
+	@keyframes hall-hid{
+		0%{
+			width:100%;
+			height:100vh;
+			top:0;
+			left:0;
+		}
+
+		100%{
+			width:0%;
+			height:0%;
+			top:50%;
+			left: 50%;
+		}
+	}
+	.block-price{
+		display: flex;
+		justify-content: center;
+		padding: 30px 0 0 0;
+		margin: 0 0 30px 0;
+	}
+	.good,.vip{
+		font-size: 15px;
+		font-weight: bold;
+		padding: 0 0 0 40px;
+		margin: 0 33px 0 0;
+		position: relative;
+	}
+	.good:before,.vip:before{
+		content: "";
+		display: block;
+		width: 20px;
+		height: 26px;
+		position: absolute;
+		left: 0;
+		bottom:0;
+		border-radius: 2px;
+
+	}
+	.good:before{
+		background: #60bfdd;
+	}
+	.vip:before{
+		background:#5f96de;
+	}
+	.block-screen{
+		width: 600px;
+		height: 30px;
+		margin: 0 auto 30px;
+		background: #DEF8FF;
+		position: relative;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 14px;
+	}
+	.block-screen:before{
+		content: "";
+		display: block;
+		position: absolute;
+		left: -30px;
+		top:0;
+		width: 0;
+		height: 0;
+		border-top: 30px solid  #DEF8FF; 
+		border-left: 30px solid transparent;
+	}
+	.block-screen:after{
+		content: "";
+		display: block;
+		position: absolute;
+		right: -30px;
+		top:0;
+		width: 0;
+		height: 0;
+		border-top: 30px solid  #DEF8FF; 
+		border-right: 30px solid transparent;
+	}
+	.block-place{
+		width: 600px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		margin: 0 auto;
+	}
+	.place{
+		width: 20px;
+		height: 25px;
+		margin: 0 5px 10px 5px;
+		background:#60bfdd;
+		cursor: pointer;
+		border-radius: 2px;
+		display: flex;
+		text-align: center;
+		flex-direction:column;
+		justify-content: center;
+		color: #60bfdd;
+		position: relative;
+	}
+	.place:hover{
+		background: #F5A623;
+		color:#fff;
+	}
+	.place:hover::after{
+		content: attr(data-title);
+		color: #fff;
+		position: absolute;
+		display: block;
+		width: 50px;
+		height: 30px;
+		padding: 5px;
+		left:-19px; top:-50px;
+		z-index: 4;
+		background: rgb(48,48,48);
+		font-family: Arial, sans-serif; 
+		font-size: 11px;
+	}
+	.place:hover::before{
+		position: absolute;
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		top:-20px;
+		z-index: 5;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 20px solid #303030;
+	}
+	.vip-place{
+		cursor: pointer;
+		width: 100%;
+		height: 20px;
+		background: #000;
+	}
+	.block-cinema{
+		width: 1000px;
+	}
+	.block-purchases{
+		width: 300px;
+	}
+</style>
+</head>
+<body>
+	<div class="hall">
+		<div  class="block-time">
+			<div class="head-line-block">
+				<button class="back-button"></button>
+			</div>
+			<div class="wrap hall-content">
+				<div class="block-cinema">
+					<h2 class="caption-item hall-prod-capt">deadpool 2</h2>
+					<div class="block-price">
+						<div class="block-price-item">
+							<p class="good">GOOD -</p>
+						</div>
+						<div class="block-price-item">
+							<p class="vip">SUPER LUX -</p>
+						</div>
+					</div>
+					<div class="block-screen">
+						ЕКРАН
+					</div>
+					<div class="block-place">
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div><div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+						<div class="place" data-title="место:60
+						ряд:5">60</div>
+					</div>
+				</div>
+				<div class="block-purchases">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

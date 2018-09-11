@@ -1,0 +1,52 @@
+
+/*************** PT SANS ***********/
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(../font/PT_Sans-Web-Regular.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(../font/PT_Sans-Web-Bold.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/************************* PT Astra Sans *************/
+@font-face {
+  font-family: 'PT Astra Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:url(../font/PTAstraSans-Regular.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'PT Astra Sans';
+  font-style: normal;
+  font-weight: 700;
+  src:url(../font/PTAstraSans-Bold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 700;
+  src:url(../font/PTAstraSans-BoldItalic.ttf) format('ttf');
+}
+/***************************** EXO 2 ******************/
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Exo 2 Black'), local('Exo2-Black'), url(../font/Exo2-Black.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Antiqua HW';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Antiqua HW'), local('AntiquaHW-Regular'),
+        url(../font/antiqua-ho.ttf) format('truetype');
+}

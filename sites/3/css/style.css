@@ -1,0 +1,1030 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+
+html {
+  font-size: 62.55%;
+}
+section,header,footer{
+	width: 100%;
+}
+h1{
+	font:700 3.8rem/4.8rem 'Montserrat', sans-serif;
+}
+h2{
+	font:700 3rem/3rem 'Montserrat', sans-serif;
+}
+h3{
+	font:700 1.2rem/2.4rem 'Montserrat', sans-serif;
+}
+.header{
+	background: #e9e9e9;
+	width: 100%;
+	padding: 5%;
+	position: fixed;
+	z-index: 10;
+}
+.button-humb{
+	position: relative;
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-top:2px solid #000;
+	border-bottom:2px solid #000;
+	transition: 0.6s;
+}
+.button-humb:before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background: #000;
+	top:calc(50% - 1px);
+	transition: 0.6s;
+}
+.button-humb:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background: #000;
+	top:calc(50% - 1px);
+	transition: 0.6s;
+	opacity: 0;
+}
+.button-humb.rotate{
+	border:none;
+}
+.button-humb.rotate:before{
+	transform:rotate(405deg);
+}
+.button-humb.rotate:after{
+	transform:rotate(-405deg);
+	opacity: 1;
+}
+.border-humb-button{
+	padding: 4px;
+	border: 2px solid #000;
+	cursor: pointer;
+}
+.header-wrap{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+.logo{
+	display: block;
+	width: 31px;
+	height: 25px;
+	background:url(../img/design/logo.png) center no-repeat;
+}
+.nav-header{
+	height: 1px;
+	overflow:hidden;
+	width: 100%;
+	text-align: center;
+	transition: 1s;
+}
+.active{
+	margin: 20px 0 0 0;
+	height: 240px;
+}
+.navigation{
+	flex-direction: column;	
+	display: flex;
+	justify-content: space-between;
+}
+.navigation li a{	
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font:700 1.2rem/3.4rem 'Montserrat', sans-serif;
+}
+.navigation li a:hover{
+	color: #10c9c3;
+}
+/************************************** SECTION BANNER *******************************/
+.section-banner{
+	background:#e9e9e9;	
+	width: 100%;
+}
+.banner{
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	padding: 5%;
+	text-align: center;
+}
+.tagline{
+	color: #000;
+	font:700 3.8rem/4.8rem 'Montserrat', sans-serif;
+	margin: 0 0 50px 0;
+}
+.description{
+	color: #787878;
+	font:400 1.8rem/2.8rem 'Nunito Sans', sans-serif;
+	margin: 0 0 55px 0;
+}
+.contact-us-button{
+	color: #fff;
+	font:400 1.2rem/1.8rem 'Montserrat', sans-serif;
+	padding: 18px 58px 18px 58px;
+	background: #00CAC4 !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	border:none;
+	outline: none;
+}
+/**************************************** SECTION ABOUT US ******************************/
+.section-about-us{
+	padding: 100px 5%;
+	text-align: center;
+}
+.about-us{
+	color: #000;
+	font:700 3rem/3rem 'Montserrat', sans-serif;
+	margin: 0 0 40px 0;
+}
+.about-us-description{
+	text-align: center;
+	margin: 0 0 20px 0;
+	font:400 1.6rem/2.4rem 'Nunito Sans', sans-serif;
+}
+.about-us-description-text{	
+	margin: 0 auto 28px;
+}
+.signature{
+	margin: 0 auto;
+	display: block;
+	width: 227px;
+	height: 57px;
+	background: url(../img/design/signature.png) center no-repeat;
+}
+/**************************************** SECTION SKILLS *****************************/
+.section-skills{
+	padding: 65px 0;
+}
+.wrap-section-skills{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.left-block-skills, .right-block-skills{
+	width: 100%;
+	padding: 0 5%;
+}
+.right-block-skills{
+	background-color:#E9E9E9;
+}
+.professional-skills{
+	font:700 3rem/3rem 'Montserrat', sans-serif;
+	margin: 0 0 40px 0;
+	text-align: center;
+}
+.skills-progress{
+	margin: 0 0 42px 0;
+}
+.progress-bar{
+	width: 100%;
+	height: 3px;
+	background-color: #D9D9D9;
+}
+.skills-progress-line{
+	height:100%;
+	width:0;
+	background-color: #00CAC4; 
+}
+.professional-skills-description{
+	display: inline-block;
+	color: #000;
+	font:700 1.2rem/1.2rem 'Montserrat', sans-serif;
+	margin: 0 15px 20px 0;
+	text-transform: uppercase;
+}
+.number{
+	opacity: 0;
+	font:700 1.2rem/1.2rem 'Montserrat', sans-serif;
+}
+.viz{
+	opacity: 1 !important;
+	transition: 1s;
+}
+.progress-75{
+	width: 75%;
+}
+.progress-65{
+	width: 65%;
+}
+.progress-90{
+	width: 90%;
+}
+/****************************************** SECTION NUMBER WORKS **********************/
+.numbers-works{
+	background:#00CAC4;
+}
+.wrap-numbers-works{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	padding: 100px 5%;
+}
+.numbers-works-items{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	text-align: center;
+	margin: 0 0 25px 0;
+
+}
+.pe-7s-portfolio,.pe-7s-star,.pe-7s-clock,.pe-7s-like{
+	color: #fff;
+	font-size: 48px;
+	margin: 0 0 25px 0;
+}
+.pe-7s-portfolio:before {
+	content: "\e622";
+}
+.pe-7s-star:before {
+	content: "\e611";
+}
+.pe-7s-like:before {
+	content: "\e642";
+}
+.pe-7s-clock:before {
+	content: "\e66b";
+}
+.block-items{
+	text-transform: uppercase;
+	font:500 1.2rem/2rem 'Montserrat', sans-serif;
+	color: #fff;
+}
+.item-number{
+	margin: 0 0 25px 0;
+	font-size: 1.8rem;
+	opacity: 0;
+}
+/********************************************* SECTION WORK **************************/
+.block-work-item{
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+}
+.work-items{
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+.work-items img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+}
+.work-items-links{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background:rgba(12,12,12,.45);
+	z-index: 2;
+	text-decoration: none;
+}
+.pe-7s-look{
+	font-size: 48px;
+	color:#fff;
+	text-align: center;
+}
+.pe-7s-look:before {	
+	content: "\e63e";
+}
+.load-more-work{
+	padding: 45px 0;
+	background: #F5F5F5;
+	text-align: center;
+}
+.load-more-work-link{
+	text-decoration: none;
+	color: #8e8e8e;
+	text-transform: uppercase;
+	font:500 1.2rem/2rem 'Montserrat', sans-serif;
+}
+/**************************************************** SECTION WORK PROCESS**************/
+.work-process-wrap{
+	padding: 100px 5%;
+	text-align: center;
+}
+.our-work-process{
+	font:700 3rem/4rem 'Montserrat', sans-serif;
+	margin: 0 0 30px 0;
+}
+.work-process-text{
+	color: #787878;
+	font:400 1.6rem/2.4rem 'Nunito Sans', sans-serif;
+}
+.last{
+	margin:0 0 52px 0;
+}
+.video{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 270px;
+	background: #E9E9E9;
+}
+.play-video{
+	display: block;
+	background: #00CAC4;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	margin: 0 auto;
+}
+.play-video:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 9px solid transparent;
+	border-left: 12px solid #fff;
+	border-bottom: 9px solid transparent;
+	top:calc(50% - 9px);
+	left: calc(50% - 4px);
+}
+/***************************************************** SECTION SRVICES*******************************/
+.section-services{
+	background: #F5F5F5;
+}
+.wrap-section-services{
+	padding: 100px 5%;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+.services-items{
+	width:100%;
+	margin: 0 0 60px 0;
+	text-align: center;
+}
+.services-icon{
+	font-size:4.8rem;
+	color: #656565;
+	margin: 0 0 25px 0;
+	display: block;
+}
+.pe-7s-diamond:before {
+	content: "\e6af";
+}
+.pe-7s-arc:before {
+	content: "\e6ab";
+}
+.pe-7s-phone:before {
+	content: "\e627";
+}
+.pe-7s-joy:before {
+	content: "\e6a4";
+}
+.pe-7s-plane:before {
+	content: "\e625";
+}
+.pe-7s-star:before {
+	content: "\e611";
+}
+.pe-7s-magic-wand:before {
+	content: "\e6b9";
+}
+.pe-7s-paint-bucket:before {
+	content: "\e6bd";
+}
+.name-services{
+	margin: 0 0 20px 0;
+	font:700 1.2rem/2.4rem 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+.services-description{
+	color: #787878;
+	font:400 1.6rem/2.4rem 'Nunito Sans', sans-serif;
+}
+
+/********************************************************* SECTION SLIDER *************************/
+.slider{
+	text-align: center;
+}
+.section-slider{
+	background: #00CAC4;
+	padding: 55px 0;
+}
+.slider-item{
+	padding: 0 5%;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;	
+}
+.slider-item p{
+	color: #fff;
+	font:500 2.4rem/3.6rem 'Montserrat', sans-serif;	
+}
+.slider-text{
+	margin:0 0 28px;
+}
+.author-name{
+	color:#fff;
+	font:500 1.2rem/2.4rem 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+.slick-dots{
+	display: inline-block;
+	z-index:2;
+	margin: 50px 0 0 0; 
+}
+  .slick-dots li{
+  	display: inline-block;
+  	position: relative;
+  	z-index:10;
+	cursor:pointer;
+	width:6px;
+	border-radius: 50px;
+	height:6px;
+	text-indent: -9999px;
+	background:rgba(255,255,255,0.65);
+	margin:0 20px 0 0;
+ }
+ .slick-dots li:hover ,  .slick-dots li.slick-active{
+ 	margin:0 18px 0 0;
+ 	bottom: 2px;
+	width: 10px;
+	height: 10px;
+	background:rgba(255,255,255,1);
+ } 
+ /**************************************************************** SECTION CLIENTS ***********************/
+.section-need-project{
+	background-color: #F5F5F5;
+}
+.section-clients-wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 65px 5%;
+}
+.clients-items img{
+	width: 100%;
+}
+.clients-items{
+	padding: 3% 0;
+}
+/******************************************** SECTION NEED PROJECT ************************/
+.section-need-project-wrap{
+	padding: 100px 5%;
+	text-align: center;
+}
+.heed-project-text{
+	width: 100%;
+	margin: 0 auto 30px;
+	text-align: center;
+	color: #787878;
+	font:400 1.6rem/2.4rem 'Nunito Sans', sans-serif;
+}
+.heed-project{
+	font:700 3.0rem/3.0rem 'Montserrat', sans-serif;
+	margin: 0 0 35px;
+}
+.form{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	width: 100%;
+	margin: 0 auto;
+	font:400 1.5rem/2.4rem 'Nunito Sans', sans-serif;
+	color: #787878;
+}
+.form input,textarea{
+	border:0;
+	background:#fff;
+}
+.input-title,.input-comment,.input-name,.input-email{
+	outline: none;
+	margin: 0 0 30px 0;
+}
+.input-name,.input-email{
+	display: block;
+	padding:15px 20px;
+	width: 100%;
+}
+.input-title,.input-comment{
+	display: block;
+	width: 100%;
+	padding:15px 20px;
+	resize: none;
+}
+.input-comment{
+	height: 170px;
+}
+.input-submit{
+	margin: 0 auto;
+}
+/********************************************************** FOOTER ******************************/
+.wrap-footer{
+	padding: 50px 5%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.footer{
+	background: #000;
+}
+.block-link{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+.block-link .list-footer{
+	margin: 0 0 25px 0;
+}
+.contact-info{
+	margin: 0 0 35px 0;
+}
+.list-footer.shift{
+	margin: 0 0 35px 0;
+}
+.list-footer li{
+	margin: 0 0 13px 0;
+}
+.list-footer a{
+	color: #bcbcbc;
+	font:400 1.8rem/2.4rem 'Nunito Sans', sans-serif;
+	text-decoration: underline;
+}
+.tagline-footer{
+	font:700 1.8rem/2.6rem 'Montserrat', sans-serif;
+	color: #fff;
+	margin: 0 0 20px;
+}
+.left-block-footer{
+	width: 100%;
+	margin: 0 0 35px 0;
+}
+.note-footer{
+	color: #bcbcbc;
+	font:400 1.8rem/2.4rem 'Nunito Sans', sans-serif;
+}
+/* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones */
+/* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones */
+/* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones */
+/* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones */
+/* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones *//* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+html {
+  font-size: 72.55%;
+}
+/************************************** SECTION BANNER *******************************/
+
+}
+
+/* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets */
+/* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets */
+/* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets */
+/* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets */
+/* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets *//* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+html {
+  font-size: 100%;
+}
+.logo{
+	display: block;
+	width: 51px;
+	height: 45px;
+	background:url(../img/design/logo.png) center no-repeat;
+	background-size: 100%;
+}
+.navigation{
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: row;	
+}
+.navigation li{	
+	margin: 0 50px 0 0;
+}
+.active{
+	margin: 20px 0 0 0;
+	height: 108px;
+}
+.button-humb{
+	width: 28px;
+	height: 28px;
+	border-top:4px solid #000;
+	border-bottom:4px solid #000;
+}
+.button-humb:before{
+	height: 4px;
+	top:calc(50% - 2px);
+} 
+.button-humb:after{
+	height: 4px;
+	top:calc(50% - 2px);
+}
+.border-humb-button{
+	padding: 8px;
+	border: 4px solid #000;
+	cursor: pointer;
+}
+.header-wrap{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+/************************************** SECTION BANNER *******************************/
+.tagline{
+	margin: 0 0 70px 0;
+}
+.description{
+	margin: 0 0 75px 0;
+}
+/**************************************** SECTION SKILLS *****************************/
+.professional-skills{
+	margin: 0 0 60px 0;
+}
+.skills-progress{
+	margin: 0 0 52px 0;
+}
+.skills-progress:last-child{
+	margin: 0;
+}
+/****************************************** SECTION NUMBER WORKS **********************/
+.wrap-numbers-works{
+	padding: 100px 0 60px 0;
+}
+.numbers-works-items{
+	padding: 0 0 0 65px;
+	width: 50%;
+	flex-direction: row;
+	text-align: left;
+	margin: 0 0 40px 0;
+}
+.pe-7s-portfolio,.pe-7s-star,.pe-7s-clock,.pe-7s-like{
+	margin: 0 26px 0 0;
+}
+.block-items{
+	padding: 4px 0 0 0;
+}
+.item-number{
+	margin: 0 0 4px 0;
+}
+/********************************************* SECTION WORK **************************/
+
+.work-items{
+	width: 50%;
+}
+/**************************************************** SECTION WORK PROCESS**************/
+.video{
+	height: 570px;
+}
+.play-video{
+	width: 85px;
+	height: 85px;
+}
+.play-video:before{
+	left: calc(50% - 4px);
+}
+/***************************************************** SECTION SRVICES*******************************/
+.services-items{
+	width:49%;
+	margin: 0 0 60px 0;
+}
+.slick-dots{
+	margin: 110px 0 0 0; 
+}
+ /**************************************************************** SECTION CLIENTS ***********************/
+.section-need-project{
+	background-color: #F5F5F5;
+}
+.section-clients-wrap{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	padding: 65px 0;
+}
+.clients-items{
+	width: 33%;
+	padding: 3% 7%;
+}
+/* .section-clients-wrap img{
+	display: block;
+	width: 21%;
+	margin: 0 6% 30px 0;
+}
+.section-clients-wrap img:nth-of-type(3){
+	display: block;
+	width: 21%;
+	margin: 0 0 30px 0;
+}
+.section-clients-wrap img:last-child{
+	margin: 0 5% 30px 0;
+} */
+}
+/* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens *//* Large Devices, Wide Screens */
+@media only screen and (min-width : 1170px) {
+html {
+  font-size: 62.55%;
+}
+.logo{
+	width: 31px;
+	height: 25px;
+}
+.nav-header{
+	width: auto;
+	height: auto;
+	text-align: left;
+	overflow:visible;
+	margin:0;
+}
+.navigation{
+	flex-direction: row;
+	justify-content: space-between;
+}
+.wrap{
+	width: 1170px;
+	margin: 0 auto;
+}
+.header{
+	padding: 0;
+	position: static;
+}
+.header-wrap{
+	padding: 38px 0 0 0;
+}
+.navigation li{	
+	margin: 0 30px 0 0;
+}
+.navigation li:last-child{
+	margin: 0;
+}
+.navigation .focus-nav{
+	color: #10c9c3;
+}
+.navigation li a{	
+	font:700 1.2rem/2.4rem 'Montserrat', sans-serif;
+}
+.border-humb-button{
+	display: none;
+}
+/************************************** SECTION BANNER *******************************/
+.section-banner{
+	background:#e9e9e9;	
+	width: 100%;
+}
+.banner{
+	padding: 172px 0 200px 0;
+	justify-content: flex-end;
+	flex-direction: row;
+	height: auto;
+	text-align: left;
+}
+.banner-text{
+	width:500px; 
+}
+.tagline{
+	margin: 0 0 30px 0;
+}
+.description{
+	margin: 0 0 35px 0;
+}
+.contact-us-button:hover{
+	text-decoration: underline;
+}
+/**************************************** SECTION ABOUT US ******************************/
+.section-about-us{
+	padding: 100px 0;
+}
+.about-us-description{
+	margin:0;
+}
+.about-us-description.about-us-description-text{
+	width: 620px;
+	margin: 0 auto 28px;
+}
+/**************************************** SECTION SKILLS *****************************/
+.section-skills{
+	padding: 165px 0;
+	background: linear-gradient(to right, #F8F9F9 0%,#F8F9F9 49.9%,#E9E9E9 50%,#E9E9E9 100%);
+}
+.left-block-skills, .right-block-skills{
+	width: 50%;
+}
+.left-block-skills{
+	padding: 0 85px 0 0;
+}
+.right-block-skills{
+	padding: 0;
+}
+.professional-skills{
+	font:700 3rem/3rem 'Montserrat', sans-serif;
+	margin: 0 0 40px 0;
+	text-align: left;
+}
+.skills-progress{
+	margin: 0 0 42px 0;
+}
+.skills-progress-line{
+	height:100%;
+	width:0;
+	background-color: #00CAC4; 
+}
+.skills-progress:last-child{
+	margin: 0;
+}
+/****************************************** SECTION NUMBER WORKS **********************/
+.wrap-numbers-works{
+	padding: 100px 0;
+}
+.numbers-works-items{
+	padding: 0 0 0 65px;
+	width: 25%;
+	flex-direction: row;
+	text-align: left;
+	margin: 0;
+}
+.pe-7s-portfolio,.pe-7s-star,.pe-7s-clock,.pe-7s-like{
+	margin: 0 26px 0 0;
+}
+.block-items{
+	padding: 4px 0 0 0;
+}
+.item-number{
+	margin: 0 0 4px 0;
+}
+/********************************************* SECTION WORK **************************/
+.work-items{
+	width: 25%;
+}
+.work-items-links{
+	background:rgba(12,12,12,.85);
+	opacity: 0;
+	transform:scale(0);
+	transition:all 0.5s;
+	border-radius: 50%;
+	text-decoration: none;
+}
+
+.work-items:hover .work-items-links{
+	opacity: 1;
+	transform:scale(1);
+	border-radius:0;
+}
+.load-more-work-link:hover{
+	text-decoration: underline;
+}
+/**************************************************** SECTION WORK PROCESS**************/
+
+
+/***************************************************** SECTION SRVICES*******************************/
+.section-services{
+	background: #F5F5F5;
+}
+.wrap-section-services{
+	padding: 100px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+.services-items{
+	width:calc(25% - 40px);
+	margin: 0 40px 60px 0;
+	text-align: center;
+}
+.services-items:nth-of-type(4n){
+	margin: 0;
+}
+.services-icon{
+	font-size:4.8rem;
+	color: #656565;
+	margin: 0 0 25px 0;
+	display: block;
+}
+.pe-7s-diamond:before {
+	content: "\e6af";
+}
+.pe-7s-arc:before {
+	content: "\e6ab";
+}
+.pe-7s-phone:before {
+	content: "\e627";
+}
+.pe-7s-joy:before {
+	content: "\e6a4";
+}
+.pe-7s-plane:before {
+	content: "\e625";
+}
+.pe-7s-star:before {
+	content: "\e611";
+}
+.pe-7s-magic-wand:before {
+	content: "\e6b9";
+}
+.pe-7s-paint-bucket:before {
+	content: "\e6bd";
+}
+.name-services{
+	margin: 0 0 20px 0;
+	font:700 1.2rem/2.4rem 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+.services-description{
+	color: #787878;
+	font:400 1.6rem/2.4rem 'Nunito Sans', sans-serif;
+}
+.wrap-section-services{
+	padding: 100px 0;
+}
+.services-items{
+	width:calc(25% - 40px);
+	margin: 0 40px 60px 0;
+}
+.services-items:nth-of-type(4n){
+	margin: 0;
+}
+
+/********************************************************* SECTION SLIDER *************************/
+.section-slider{
+	padding: 175px 0;
+}
+.slider-item{
+	width: 815px;
+}
+/**************************************************************** SECTION CLIENTS ***********************/
+.section-clients-wrap{
+	justify-content: space-between;
+}
+.clients-items{
+	width: auto;
+	padding: 0;
+}
+/******************************************** SECTION NEED PROJECT ************************/
+.section-need-project-wrap{
+	padding: 100px 0;
+}
+.heed-project-text{
+	width: 540px;
+}
+.form{
+	width: 670px;
+}
+.input-name,.input-email{
+	width: 320px;
+}
+/********************************************************** FOOTER ******************************/
+.wrap-footer{
+	padding: 100px 0;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: left;
+}
+.block-link .list-footer{
+	margin: 0 55px 0 0;
+}
+.contact-info{
+	margin: 0;
+}
+.list-footer.shift{
+	margin: 0 135px 0 0;
+}
+.list-footer li{
+	margin: 0;
+}
+.list-footer a{
+	font:400 1.5rem/2.4rem 'Nunito Sans', sans-serif;
+	text-decoration: none;
+}
+.list-footer a:hover{
+	text-decoration: underline;
+}
+.tagline-footer{
+	font:700 1.5rem/2.6rem 'Montserrat', sans-serif;
+}
+.left-block-footer{
+	width: 230px;
+}
+.note-footer{
+	color: #bcbcbc;
+	font:400 1.5rem/2.4rem 'Nunito Sans', sans-serif;
+} 
+}
